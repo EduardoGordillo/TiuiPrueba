@@ -14,7 +14,7 @@ APIRESTful basada en TypeScript con las siguientes dependencias:
 Se agrega un script  'dev : ts-node-dev --respawn --pretty --debug --transpile-only src/index.ts' para ejecutar el codigo en modo desarrrollo:
 
 
- +ts-node-dev: Es una herramienta que nos permite ejecutar archivos TypeScript directamente desde la línea de comandos. ts-node-dev es similar a ts-node, pero agrega funcionalidades adicionales como la capacidad de reiniciar la aplicación cuando se detectan cambios en el código.
+ + ts-node-dev: Es una herramienta que nos permite ejecutar archivos TypeScript directamente desde la línea de comandos. ts-node-dev es similar a ts-node, pero agrega funcionalidades adicionales como la capacidad de reiniciar la aplicación cuando se detectan cambios en el código.
 
  + respawn: Indica a ts-node-dev que debe reiniciar la aplicación cada vez que detecte cambios en el código.
 
