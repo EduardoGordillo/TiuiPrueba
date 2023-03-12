@@ -16,13 +16,13 @@ Se agrega un script  'dev : ts-node-dev --respawn --pretty --debug --transpile-o
 
  +ts-node-dev: Es una herramienta que nos permite ejecutar archivos TypeScript directamente desde la línea de comandos. ts-node-dev es similar a ts-node, pero agrega funcionalidades adicionales como la capacidad de reiniciar la aplicación cuando se detectan cambios en el código.
 
- +respawn: Indica a ts-node-dev que debe reiniciar la aplicación cada vez que detecte cambios en el código.
+ + respawn: Indica a ts-node-dev que debe reiniciar la aplicación cada vez que detecte cambios en el código.
 
- +pretty: Hace que las salidas de la consola sean más legibles y fáciles de leer.
+ + pretty: Hace que las salidas de la consola sean más legibles y fáciles de leer.
 
- +debug: Permite la depuración de TypeScript mediante la generación de información de depuración adicional.
+ + debug: Permite la depuración de TypeScript mediante la generación de información de depuración adicional.
 
- +transpile-only: Permite la compilación sin comprobación de tipos de TypeScript, lo que acelera el proceso de compilación.
+ + transpile-only: Permite la compilación sin comprobación de tipos de TypeScript, lo que acelera el proceso de compilación.
 
 
 
@@ -31,18 +31,18 @@ La API estara corriendo en el Puerto : 3000
 
 Desde el cual se podran hacer las siguientes acciones:
 
- +GET 'http://localhost:3000/'
+ + GET 'http://localhost:3000/'
  Peticion para obtener todos los items que esten persistidos en forma de JSON
  
- +GET 'http://localhost:3000/:id'
+ + GET 'http://localhost:3000/:id'
  Peticion para obtener un item deacuerdo por el id ingresado
  
- +POST 'http://localhost:3000/crear'  
+ + POST 'http://localhost:3000/crear'  
  Peticion donde se ingresan en su cuerpo el name y la description en forma JSON y se agregan a la lista de items
  
- +PUT 'http://localhost:3000/:id'  
+ + PUT 'http://localhost:3000/:id'  
  Peticion que con el id es seleccionado el item y es actualizado con los datos ingresados en el cuerpo de la misma
- +DELETE 'http://localhost:3000/:id'
+ + DELETE 'http://localhost:3000/:id'
  Peticion que con el id es seleccionado el item y es removido de los datos persistidos
  
  
