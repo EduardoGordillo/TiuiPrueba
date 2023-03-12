@@ -15,7 +15,7 @@ export const itemsRouter = express.Router();
  */
 
 // Obtener todos los Items
-//GET /api/menu/items
+//GET /
 
 itemsRouter.get('/', async(req: Request, res: Response)=>{
     try{
@@ -27,7 +27,7 @@ itemsRouter.get('/', async(req: Request, res: Response)=>{
 });
 
 // Obtener solo un item por su propiedad id
-//GET /api/menu/items/:id
+//GET /:id
 
 itemsRouter.get('/:id', async (req:Request, res: Response)=>{
     const id: number = parseInt(req.params.id, 10);
@@ -44,10 +44,11 @@ itemsRouter.get('/:id', async (req:Request, res: Response)=>{
     }
 });
 // Crear nuevo Item ingresado el body desde que se hace la peticion
-//POST /api/menu/items
+//POST /crear
 
 itemsRouter.post("/crear", async (req: Request, res: Response) => {
     try {
+      
       const item: BaseItem = req.body;
   
       const newItem = await ItemService.create(item);
@@ -59,7 +60,7 @@ itemsRouter.post("/crear", async (req: Request, res: Response) => {
   });
 
 //Actualizar items por su propiedad id
-//PUT /api/menu/items/:id
+//PUT /:id
 
 
 itemsRouter.put("/:id", async (req: Request, res: Response) => {
@@ -78,14 +79,31 @@ itemsRouter.put("/:id", async (req: Request, res: Response) => {
       const newItem = await ItemService.create(itemUpdate);
   
       res.status(201).json(newItem);
+  
+      
     } catch (e) {
       res.status(500).send(e);
     }
   });
 
-
+  //Actualizar la propiedad completed del item
+  //PUT /complete/:id
+  itemsRouter.put("/complete/:id", async (req: Request, res: Response) => {
+    const id: number = parseInt(req.params.id, 10);
+  
+    try {
+      const existingItem: Item = await ItemService.find(id);
+      if(existingItem){
+        existingItem.complete = !existingItem.complete;
+      }
+      res.status(201).json(existingItem);
+     
+    } catch (e) {
+      res.status(500).send(e);
+    }
+  });
 //  Remover un item por su propiedad id
-//DELETE /api/menu/items/:id
+//DELETE /:id
 /**
  * 
  */
