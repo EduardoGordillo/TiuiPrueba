@@ -11,6 +11,21 @@ APIRESTful basada en TypeScript con las siguientes dependencias:
 
 + helmet: Express middleware para proteger sus aplicaciones mediante la configuración de varios encabezados HTTP, que mitigan los vectores de ataque comunes.
 
+Se agrega un script  'dev : ts-node-dev --respawn --pretty --debug --transpile-only src/index.ts' para ejecutar el codigo en modo desarrrollo:
+
+
+ +ts-node-dev: Es una herramienta que nos permite ejecutar archivos TypeScript directamente desde la línea de comandos. ts-node-dev es similar a ts-node, pero agrega funcionalidades adicionales como la capacidad de reiniciar la aplicación cuando se detectan cambios en el código.
+
+ +respawn: Indica a ts-node-dev que debe reiniciar la aplicación cada vez que detecte cambios en el código.
+
+ +pretty: Hace que las salidas de la consola sean más legibles y fáciles de leer.
+
+ +debug: Permite la depuración de TypeScript mediante la generación de información de depuración adicional.
+
+ +transpile-only: Permite la compilación sin comprobación de tipos de TypeScript, lo que acelera el proceso de compilación.
+
+
+
 
 La API estara corriendo en el Puerto : 3000
 
