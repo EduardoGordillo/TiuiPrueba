@@ -87,6 +87,11 @@ export const update = async (id: number, itemUpdate: BaseItem): Promise<Item | n
     }
     return items[id]
 }
+/**
+ * Con el id actualiza el estado del elemento 
+ * @param id 
+ * @returns el elemento modificado
+ */
 export const completed = async (id: number): Promise<Item | null> => {
     const item = await find(id);
    
