@@ -42,6 +42,10 @@ Desde el cual se podran hacer las siguientes acciones:
  
  + PUT 'http://localhost:3000/:id'  
  Peticion que con el id es seleccionado el item y es actualizado con los datos ingresados en el cuerpo de la misma
+ 
+ + PUT 'http://localhost:3000/complete/:id'  
+ Peticion que con el id es seleccionado el item y es actualizada la propiedad complete
+
  + DELETE 'http://localhost:3000/:id'
  Peticion que con el id es seleccionado el item y es removido de los datos persistidos
  
